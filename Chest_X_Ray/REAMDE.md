@@ -31,7 +31,7 @@ The Binary cross-entropy loss function, used for the case of classifying X-ray i
 Because medical datasets are imbalanced, with the normal cases being more frequent, the total loss from normal examples will be higher than the ones from affected examples. So the algorithm will optimise its updates to get the normal examples right and not giving much relative weight to mass examples. The loss function can be modifies to weigh the normal and affected classes differently ($w_p$ for the positive examples and $w_n$ for the negative examples):
 
 <p align="center">
-<img src="./images/weighted-loss-function.png" alt="Binary Cross entropy weighted loss function" style="width:50%;">
+<img src="./images/weighted-loss-function.png" alt="Binary Cross entropy weighted loss function" style="width:70%;">
 </p>
 <br>
 

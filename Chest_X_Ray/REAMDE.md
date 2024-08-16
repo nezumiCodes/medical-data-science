@@ -5,13 +5,12 @@ Chest X-ray is the most commonly performed medical imaging exam, with about 2 bi
 <br><br>
 
 
-<p align="center">
-<figure>
+
+
 <img align="center" src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2020/12/Capture27.jpg" alt="Chest X-ray images showcasing various types of pneumonia" style="width:40%;">
 <br>
-<figcaption style="font-size:9">Source: <a href="https://www.medrxiv.org/content/10.1101/2020.12.14.20248158v1.full.pdf">Transfer learning exploits chest-Xray to diagnose COVID-19 pneumonia (Katsamenis, I et al., 2020)</a></figcaption>
-</figure>
-</p>
+<!-- <figcaption style="font-size:9">Source: <a href="https://www.medrxiv.org/content/10.1101/2020.12.14.20248158v1.full.pdf">Transfer learning exploits chest-Xray to diagnose COVID-19 pneumonia (Katsamenis, I et al., 2020)</a></figcaption> -->
+
 
 ## Challenges in medical datasets
 Classification for medical imaging is faced with various challenges when it comes to training algorithms, namely class imbalance, multi-task and dataset size.
@@ -22,10 +21,12 @@ Class imbalance refers to the disproportionate ratio of samples / images among t
 #### Modifying the loss function
 The Binary cross-entropy loss function, used for the case of classifying X-ray images, where $X$ are the features / image we are feeding to the model, and $y$ is the output probability of having a disease.
 $$
+
 L(X,y) = \left\{ \begin{array}{cl}
 -logP(Y=1|X) & if \ y = 1 \\
 -logP(Y=0|X) & if \ y = 0
 \end{array} \right.
+
 $$
 
 Because medical datasets are imbalanced, with the normal cases being more frequent, the total loss from normal examples will be higher than the ones from affected examples. So the algorithm will optimise its updates to get the normal examples right and not giving much relative weight to mass examples. The loss function can be modifies to weigh the normal and affected classes differently ($w_p$ for the positive examples and $w_n$ for the negative examples):
@@ -55,6 +56,7 @@ $$
 And for class imbalance we can use the weighted loss function, where the weights now will be associated with each class. Below is shown the weighted loss function for edema:
 
 $$
+
 L(X,y) = \left\{ \begin{array}{cl}
 -w_{p,edema} \times logP(Y=1|X) & if \ y = 1 \\
 -w_{n,edema} \times logP(Y=0|X) & if \ y = 0

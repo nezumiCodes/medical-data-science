@@ -22,6 +22,7 @@ Class imbalance refers to the disproportionate ratio of samples / images among t
 
 #### Modifying the loss function
 The Binary cross-entropy loss function, used for the case of classifying X-ray images, where $X$ are the features / image we are feeding to the model, and $y$ is the output probability of having a disease.
+
 $$
 
 L(X,y) = \left\{ \begin{array}{cl}
@@ -120,7 +121,7 @@ Positive predictive value (PPV) is the probability of a patient actually having 
 We can relate PPV and NPV to sensitivity and specificity using a confusion matrix. Below is presented a confusion matrix for heart disease.
 
 <p align="center">
-<img src="https://miro.medium.com/v2/resize:fit:874/1*h1MBLDA6bPxNpxwgSD1xNA.png" alt="Confusion matrix for heart disease" style="width:30%;">
+<img src="https://miro.medium.com/v2/resize:fit:874/1*h1MBLDA6bPxNpxwgSD1xNA.png" alt="Confusion matrix for heart disease" style="width:40%;">
 <br>
 <p align="center">Source: <a href="https://towardsdatascience.com/understanding-confusion-matrix-precision-recall-and-f1-score-8061c9270011">Understanding Confusion Matrix, Precision-Recall, and F1-Score</a></p>
 </p>

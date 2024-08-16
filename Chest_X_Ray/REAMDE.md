@@ -128,11 +128,15 @@ Sensitivity, specificity, PPV and NPV will be calculated according to the follow
 $$
 Sensitivity = \frac{TP}{TP+FN}
 $$
+
 $$
 Specificity  = \frac{TN}{FP+TN}
 $$
+
 $$
 PPV = \frac{TP}{TP+FP}
+$$
+
 $$
 NPV = \frac{TN}{FN+TN}
 $$
@@ -144,7 +148,10 @@ The ROC curve aims to measure the quality of a binary estimator, as it considers
 To plot the ROC curve we need the True Positive Rate (TPR) and False Positive Rate (FPR).
 
 $$
-TPR = \frac{TP}{TP+FN} = sensitivity \\
+TPR = \frac{TP}{TP+FN} = sensitivity
+$$
+
+$$
 FPR  = \frac{FP}{FP+TN} = 1 - specificity
 $$
 

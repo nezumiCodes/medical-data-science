@@ -35,12 +35,14 @@ $$
 Because medical datasets are imbalanced, with the normal cases being more frequent, the total loss from normal examples will be higher than the ones from affected examples. So the algorithm will optimise its updates to get the normal examples right and not giving much relative weight to mass examples. The loss function can be modifies to weigh the normal and affected classes differently ($w_p$ for the positive examples and $w_n$ for the negative examples):
 
 $$
+
 L(X,y) = \left\{ \begin{array}{cl}
 -w_p \times logP(Y=1|X) & if \ y = 1 \\
 -w_n \times logP(Y=0|X) & if \ y = 0
 \end{array} \right.
 \;\; where \;\;
 w_p = \frac{num \ \ negative}{num \ \ total} \;\; , \;\;  w_n = \frac{num \ \ positive}{num \ \ total}
+
 $$
 
 

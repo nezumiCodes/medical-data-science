@@ -111,14 +111,14 @@ where $P(+ \ | \ disease)$ is called sensitivity and $P(- \ | \ normal)$ is call
 
 ### Positive and Negative Predictive Value
 
-Positive predictive value (PPV) is the probability of a patient actually having a disease given that the model has predicted that they have it ($P(disease \ | \ +)$). Negative predictive value (NPV) is the probability of a patient being healthy given that the model has predicted that they are ($P(normal \ | \ -)$).
+Positive predictive value (PPV) is the probability of a patient actually having a disease given that the model has predicted that they have it ( $P(disease \ | \ +)$ ). Negative predictive value (NPV) is the probability of a patient being healthy given that the model has predicted that they are ( $P(normal \ | \ -)$ ).
 
 We can relate PPV and NPV to sensitivity and specificity using a confusion matrix. Below is presented a confusion matrix for heart disease.
 
 <div style="text-align:center;">
 <figure>
 <img src="https://miro.medium.com/v2/resize:fit:874/1*h1MBLDA6bPxNpxwgSD1xNA.png" alt="Confusion matrix for heart disease" style="width:30%;">
-
+<br>
 <figcaption style="font-size:9">Source: <a href="https://towardsdatascience.com/understanding-confusion-matrix-precision-recall-and-f1-score-8061c9270011">Understanding Confusion Matrix, Precision-Recall, and F1-Score</a></figcaption>
 </figure>
 </div>
@@ -126,10 +126,10 @@ We can relate PPV and NPV to sensitivity and specificity using a confusion matri
 Sensitivity, specificity, PPV and NPV will be calculated according to the following formulas:
 
 $$
-Sensitivity = \frac{TP}{TP+FN} \\
-Specificity  = \frac{TN}{FP+TN} \\
-PPV = \frac{TP}{TP+FP} \\
-NPV = \frac{TN}{FN+TN} \\
+Sensitivity = \frac{TP}{TP+FN} \; \; , \; \;
+Specificity  = \frac{TN}{FP+TN} \; \;, \; \;
+PPV = \frac{TP}{TP+FP} \; \;, \; \;
+NPV = \frac{TN}{FN+TN}
 $$
 
 ## ROC Curve and Threshold

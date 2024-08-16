@@ -7,7 +7,7 @@ Chest X-ray is the most commonly performed medical imaging exam, with about 2 bi
 
 <p align="center">
 <figure>
-<img src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2020/12/Capture27.jpg" alt="Chest X-ray images showcasing various types of pneumonia" style="width:40%;">
+<img align="center" src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2020/12/Capture27.jpg" alt="Chest X-ray images showcasing various types of pneumonia" style="width:40%;">
 <br>
 <figcaption style="font-size:9">Source: <a href="https://www.medrxiv.org/content/10.1101/2020.12.14.20248158v1.full.pdf">Transfer learning exploits chest-Xray to diagnose COVID-19 pneumonia (Katsamenis, I et al., 2020)</a></figcaption>
 </figure>

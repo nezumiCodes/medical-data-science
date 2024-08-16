@@ -8,9 +8,10 @@ Chest X-ray is the most commonly performed medical imaging exam, with about 2 bi
 
 <p align="center">
 <img src="https://d2jx2rerrg6sh3.cloudfront.net/image-handler/picture/2020/12/Capture27.jpg" alt="Chest X-ray images showcasing various types of pneumonia" style="width:40%;">
+<p align="center">Source: <a href="https://www.medrxiv.org/content/10.1101/2020.12.14.20248158v1.full.pdf">Transfer learning exploits chest-Xray to diagnose COVID-19 pneumonia (Katsamenis, I et al., 2020)</a></p>
 </p>
 <br>
-<!-- <figcaption style="font-size:9">Source: <a href="https://www.medrxiv.org/content/10.1101/2020.12.14.20248158v1.full.pdf">Transfer learning exploits chest-Xray to diagnose COVID-19 pneumonia (Katsamenis, I et al., 2020)</a></figcaption> -->
+
 
 
 ## Challenges in medical datasets
@@ -121,8 +122,8 @@ We can relate PPV and NPV to sensitivity and specificity using a confusion matri
 <p align="center">
 <img src="https://miro.medium.com/v2/resize:fit:874/1*h1MBLDA6bPxNpxwgSD1xNA.png" alt="Confusion matrix for heart disease" style="width:30%;">
 <br>
-<p style="font-size:9">Source: <a href="https://towardsdatascience.com/understanding-confusion-matrix-precision-recall-and-f1-score-8061c9270011">Understanding Confusion Matrix, Precision-Recall, and F1-Score</a></p>
-<p>
+<p align="center">Source: <a href="https://towardsdatascience.com/understanding-confusion-matrix-precision-recall-and-f1-score-8061c9270011">Understanding Confusion Matrix, Precision-Recall, and F1-Score</a></p>
+</p>
 <br>
 Sensitivity, specificity, PPV and NPV will be calculated according to the following formulas:
 

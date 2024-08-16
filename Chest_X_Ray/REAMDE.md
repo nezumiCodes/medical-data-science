@@ -49,14 +49,10 @@ $$
 
 And for class imbalance we can use the weighted loss function, where the weights now will be associated with each class. Below is shown the weighted loss function for edema:
 
-$$
-
-L(X,y) = \left\{ \begin{array}{cl}
--w_{p,edema} \times logP(Y=1|X) & if \ y = 1 \\
--w_{n,edema} \times logP(Y=0|X) & if \ y = 0
-\end{array} \right.
-
-$$
+<p align="center">
+<img src="./images/weighted-loss-function-example.png" alt="Binary Cross entropy weighted loss function example" style="width:80%;">
+</p>
+<br>
 
 ### Dataset size
 

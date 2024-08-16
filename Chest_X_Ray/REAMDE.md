@@ -122,13 +122,18 @@ We can relate PPV and NPV to sensitivity and specificity using a confusion matri
 <figcaption style="font-size:9">Source: <a href="https://towardsdatascience.com/understanding-confusion-matrix-precision-recall-and-f1-score-8061c9270011">Understanding Confusion Matrix, Precision-Recall, and F1-Score</a></figcaption>
 </figure>
 </div>
-
+<br>
 Sensitivity, specificity, PPV and NPV will be calculated according to the following formulas:
 
 $$
-Sensitivity = \frac{TP}{TP+FN} \; \; , \; \;
-Specificity  = \frac{TN}{FP+TN} \; \;, \; \;
-PPV = \frac{TP}{TP+FP} \; \;, \; \;
+Sensitivity = \frac{TP}{TP+FN}
+$$
+$$
+Specificity  = \frac{TN}{FP+TN}
+$$
+$$
+PPV = \frac{TP}{TP+FP}
+$$
 NPV = \frac{TN}{FN+TN}
 $$
 

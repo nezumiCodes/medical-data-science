@@ -50,7 +50,7 @@ $$
 And for class imbalance we can use the weighted loss function, where the weights now will be associated with each class. Below is shown the weighted loss function for edema:
 
 <p align="center">
-<img src="./images/weighted-loss-function-example.png" alt="Binary Cross entropy weighted loss function example" style="width:80%;">
+<img src="./images/weighted-loss-function-example.png" alt="Binary Cross entropy weighted loss function example" style="width:60%;">
 </p>
 <br>
 

@@ -23,28 +23,17 @@ Class imbalance refers to the disproportionate ratio of samples / images among t
 #### Modifying the loss function
 The Binary cross-entropy loss function, used for the case of classifying X-ray images, where $X$ are the features / image we are feeding to the model, and $y$ is the output probability of having a disease.
 
-$$
-
-L(X,y) = \left\{ \begin{array}{cl}
--logP(Y=1|X) & if \ y = 1 \\
--logP(Y=0|X) & if \ y = 0
-\end{array} \right.
-
-$$
+<p align="center">
+<img src="./images/loss-function.png" alt="Binary Cross entropy loss function" style="width:20%;">
+</p>
+<br>
 
 Because medical datasets are imbalanced, with the normal cases being more frequent, the total loss from normal examples will be higher than the ones from affected examples. So the algorithm will optimise its updates to get the normal examples right and not giving much relative weight to mass examples. The loss function can be modifies to weigh the normal and affected classes differently ($w_p$ for the positive examples and $w_n$ for the negative examples):
 
-$$
-
-L(X,y) = \left\{ \begin{array}{cl}
--w_p \times logP(Y=1|X) & if \ y = 1 \\
--w_n \times logP(Y=0|X) & if \ y = 0
-\end{array} \right.
-\;\; where \;\;
-w_p = \frac{num \ \ negative}{num \ \ total} \;\; , \;\;  w_n = \frac{num \ \ positive}{num \ \ total}
-
-$$
-
+<p align="center">
+<img src="./images/weigthed-loss-function.png" alt="Binary Cross entropy weighted loss function" style="width:20%;">
+</p>
+<br>
 
 #### Resampling method
 We can group the normal classes and the affected classes together; the normal group will have more examples overall. From these groups we can now sample the images so that there is an equal number of positive and negative samples. The main issue here is that the resampled dataset may not have all samples from the normal cases, and will also have duplicates of the affected cases. If we now use the Binary cross-entropy loss function without the weights, there will be an equal contribution to the loss from the positive and negative examples.

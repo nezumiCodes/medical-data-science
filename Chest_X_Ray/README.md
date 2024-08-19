@@ -146,6 +146,7 @@ In this case, the consensus vote method can be used, where a group of experts de
 For medical datasets, it's imperative to calculate the accuracy based on the correct predictions given that a patient has a disease or not. For this purpose, conditional probabilities are used to calculate the accuracy:
 </div>
 <br>
+
 $$
 Accuracy = P(correct \ \cap \ disease)+ P(correct \ \cap \ normal) = P(+ \ | \ disease)P(disease)+P(- \ | \ normal)P(normal)
 $$

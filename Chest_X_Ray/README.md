@@ -55,8 +55,9 @@ In binary classification, we only care if a case is positive or negative, howeve
 </div>
 
 <div align="justify">
-In multi-task classification, in comparison to binary, instead of having one label, we will now have a label for every disease, where $0$ would denote the absence of the disease and $1$ would denote its presence. The model will now also have multiple output probabilities instead of a single one. For multi-task classification we also need to modify the loss function to reflect the presence of multiple classes; the new loss will be the sum of the losses over the multiple diseases, in the case of chest x-rays it would be:
+In multi-task classification, in comparison to binary, instead of having one label, we will now have a label for every disease, where 0 would denote the absence of the disease and 1 would denote its presence. The model will now also have multiple output probabilities instead of a single one. For multi-task classification we also need to modify the loss function to reflect the presence of multiple classes; the new loss will be the sum of the losses over the multiple diseases, in the case of chest x-rays it would be:
 </div>
+<br>
 
 $$
 L(X, y) = L(X, y_{mass}) + L(X, y_{pneumonia}) + L(X, y_{edema})
@@ -90,6 +91,7 @@ By pretraining, the network learns general features, for example if we pretrain 
 <div align="justify">
 We can generate more images from the ones we have in order to increase the size of our dataset. This can be done by applying transformations to the images, such as rotating, sideways translation, zoom in or out, change brightness or contrast, or even apply a combination of these transformations.
 </div>
+<br>
 
 <div align="justify">
 These transformations are helpful in augmenting the dataset, however these need to reflect variations that will help the model generalise the test set and real world scenarios, and also the transformations keep the label the same. For example, if we were to vertically flip a chest x-ray then the heart would show on the right side instead of left, and this a rare heart condition called dextrocardia, and thus the label would not be preserved.
@@ -100,6 +102,7 @@ These transformations are helpful in augmenting the dataset, however these need 
 <div align="justify">
 In all machine learning applications, we divide our dataset into smaller ones to be used for training, validation and testing. The training set is used for development, the validation set is used for tuning and selection of models (if no validation model exists then selection of models is done with the training set), and test set is for reporting results. We can also split the training and validation sets multiple times in a method called cross-validation to reduce variability in the estimate of model performance.
 </div>
+<br>
 
 <div align="justify">
 In the context of medicine, there are several challenges with building these sets, namely how to make the test sets independent (patient overlap), how we sample them and how we set the ground truth.
@@ -142,7 +145,7 @@ In this case, the consensus vote method can be used, where a group of experts de
 <div align="justify">
 For medical datasets, it's imperative to calculate the accuracy based on the correct predictions given that a patient has a disease or not. For this purpose, conditional probabilities are used to calculate the accuracy:
 </div>
-
+<br>
 $$
 Accuracy = P(correct \ \cap \ disease)+ P(correct \ \cap \ normal) = P(+ \ | \ disease)P(disease)+P(- \ | \ normal)P(normal)
 $$

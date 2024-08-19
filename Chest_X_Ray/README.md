@@ -156,7 +156,7 @@ where $P(+ \ | \ disease)$ is called sensitivity and $P(- \ | \ normal)$ is call
 ### Positive and Negative Predictive Value
 
 <div align="justify">
-Positive predictive value (PPV) is the probability of a patient actually having a disease given that the model has predicted that they have it ( $P(disease \ | \ +)$ ). Negative predictive value (NPV) is the probability of a patient being healthy given that the model has predicted that they are ( $P(normal \ | \ -)$ ).
+Positive predictive value (PPV) is the probability of a patient actually having a disease given that the model has predicted that they have it ( P(disease | +) ). Negative predictive value (NPV) is the probability of a patient being healthy given that the model has predicted that they are ( P(normal | -) ).
 </div>
 
 <div align="justify">
@@ -192,7 +192,7 @@ $$
 ## ROC Curve and Threshold
 
 <div align="justify">
-The ROC curve aims to measure the quality of a binary estimator, as it considers how the estimator is able to split between both classes as we vary the threshold. Typically the threshold is set at $0.5$.
+The ROC curve aims to measure the quality of a binary estimator, as it considers how the estimator is able to split between both classes as we vary the threshold. Typically the threshold is set at 0.5.
 </div>
 
 To plot the ROC curve we need the True Positive Rate (TPR) and False Positive Rate (FPR).

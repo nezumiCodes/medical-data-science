@@ -25,7 +25,7 @@ Class imbalance refers to the disproportionate ratio of samples / images among t
 
 #### Modifying the loss function
 <div align="justify">
-The Binary cross-entropy loss function, used for the case of classifying X-ray images, where $X$ are the features / image we are feeding to the model, and $y$ is the output probability of having a disease.
+The Binary cross-entropy loss function, used for the case of classifying X-ray images, where X are the features / image we are feeding to the model, and y is the output probability of having a disease.
 </div>
 
 <br>
@@ -35,7 +35,7 @@ The Binary cross-entropy loss function, used for the case of classifying X-ray i
 <br>
 
 <div align="justify">
-Because medical datasets are imbalanced, with the normal cases being more frequent, the total loss from normal examples will be higher than the ones from affected examples. So the algorithm will optimise its updates to get the normal examples right and not giving much relative weight to mass examples. The loss function can be modifies to weigh the normal and affected classes differently ($w_p$ for the positive examples and $w_n$ for the negative examples):
+Because medical datasets are imbalanced, with the normal cases being more frequent, the total loss from normal examples will be higher than the ones from affected examples. So the algorithm will optimise its updates to get the normal examples right and not giving much relative weight to mass examples. The loss function can be modifies to weigh the normal and affected classes differently (w_p for the positive examples and w_n for the negative examples):
 </div>
 
 <br>
@@ -53,7 +53,7 @@ We can group the normal classes and the affected classes together; the normal gr
 <div align="justify">
 In binary classification, we only care if a case is positive or negative, however in many medical imaging applications we are interested in the presence or absence of many diseases. One simple way to tackle this is to have many models that each learn one of these tasks. Another way is to create a multi-task model that will allow the use of data more efficiently, as many of these diseases can have common features.
 </div>
-
+<br>
 <div align="justify">
 In multi-task classification, in comparison to binary, instead of having one label, we will now have a label for every disease, where 0 would denote the absence of the disease and 1 would denote its presence. The model will now also have multiple output probabilities instead of a single one. For multi-task classification we also need to modify the loss function to reflect the presence of multiple classes; the new loss will be the sum of the losses over the multiple diseases, in the case of chest x-rays it would be:
 </div>

@@ -113,7 +113,7 @@ In the context of medicine, there are several challenges with building these set
 <div align="justify">
 An example of patient overlap is when a patient comes in twice within the span of a few months, and both times they were wearing a necklace when they had their x-ray taken. Then one of these images ends up in the training set and the other in the test set. We predict for the test image that it's normal, which can be true initially, however the problem is that the model can memorise the output normal for the necklace feature and become overconfident in its test set performance.
 </div>
-
+<br>
 <div align="justify">
 A way to solve this problem is to make sure that these images occur only in one of the sets, so the model won't memorise the necklace on the patient. This is done by splitting the datasets not by images, rather by patient so all the images of each patient will end up in the same set (be in training, validation or test set).
 </div>
@@ -123,9 +123,9 @@ A way to solve this problem is to make sure that these images occur only in one 
 <div align="justify">
 When the dataset is sampled and then split, we might end up with a test set that contains no positive or no negative cases, and we would have no way to actually test the performance of the model. This is especially a problem with medical datasets where we already don't have enough samples or no that may examples of a specific disease.
 </div>
-
+<br>
 <div align="justify">
-One way to tackle this is when creating a test set, is to sample the test set to have at least an $X$% of samples from the minority class(es), where typically $X=50$ (for binary classification) to ensure that there are sufficient examples to get a good estimate of the model performance for all cases. For the validation set we follow the same logic since we want it to reflect the distribution of classes as the test set.
+One way to tackle this is when creating a test set, is to sample the test set to have at least an X% of samples from the minority class(es), where typically X=50 (for binary classification) to ensure that there are sufficient examples to get a good estimate of the model performance for all cases. For the validation set we follow the same logic since we want it to reflect the distribution of classes as the test set.
 </div>
 
 ### Ground Truth / Reference Standard
